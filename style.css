@@ -1,5 +1,4 @@
-
-.login{
+.bg-main-picture{
     background-image: url(image/6.png);
     background-size: cover;
     height: 100vh;
@@ -7,7 +6,7 @@
     z-index: 1;
 }
 
-.login::before{
+.bg-main-picture::before{
     content: '';
     position: absolute;
     top: 0;

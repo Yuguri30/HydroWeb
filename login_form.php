@@ -1,4 +1,3 @@
-
 <?php
 
 @include_once './connections/config.php';
@@ -45,6 +44,7 @@ if(mysqli_num_rows($result) > 0){
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -57,11 +57,12 @@ if(mysqli_num_rows($result) > 0){
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="login">
-        <div class="row h-100 m-0">
-            <div class="col-lg-4 col-sm-12 bg-main py-5 text-white">
-                
+    <div class="bg-main-picture">
+        <div class="row m-0">
+            <div class="col-lg-4 col-sm-12 bg-main py-5 text-white" style="min-height: 100vh;">
+
                 <!-- Logo Area -->
                 <div class="d-flex justify-content-center align-item-center">
                     <img class="w-50 mx-5" src="image/logo.png" alt="hydro fluid logo">
@@ -72,7 +73,7 @@ if(mysqli_num_rows($result) > 0){
                     <h1 class="fw-light fs-4 mb-3">Welcome to our website!</h1>
                     <div class="mb-3">
                         <label for="emailForm" class="form-label">Email</label>
-                        <input type="email" name="email"class="form-control" id="emailForm" placeholder="johndoe@example.com">
+                        <input type="email" name="email" class="form-control" id="emailForm" placeholder="johndoe@example.com">
                     </div>
                     <div class="mb-3">
                         <label for="passwordForm" class="form-label">Password</label>
@@ -91,10 +92,10 @@ if(mysqli_num_rows($result) > 0){
 
                     <div class="col-12 mt-3 mb-3">
                         <button type="submit" name="submit" class="btn btn-lb w-100 shadow">Log In</button>
-                    </div>    
+                    </div>
                     <div class="col-12">
                         <p>You don't have account? <a href="register.php" class="link-light">Sign In</a></p>
-                    </div>    
+                    </div>
 
                 </form>
 
@@ -109,6 +110,7 @@ if(mysqli_num_rows($result) > 0){
             </div>
         </div>
     </div>
-    
+
 </body>
+
 </html>

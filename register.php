@@ -36,6 +36,7 @@ if(mysqli_num_rows($result) > 0){
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -49,33 +50,68 @@ if(mysqli_num_rows($result) > 0){
 
     <!-- CSS -->
     <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
+    <div class="bg-main-picture">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4 col-12 bg-main text-white p-5 overflow-y-scroll" style="max-height:100vh">
 
-<div class="form-container">
+                    <!-- Logo Area -->
+                    <div class="d-flex justify-content-center align-item-center">
+                        <img class="w-50 mx-5" src="image/logo.png" alt="hydro fluid logo">
+                    </div>
 
-    <form action="#" method="POST">
-        <h3>register now</h3>
-        <?php
-            if(isset($error)){
-                foreach($error as $error){
-                echo '<span class="error-msg">'.$error.'</span>';
-                };
-            };
-        ?>
-        <input type="text" name="name" required placeholder="enter your name">
-        <input type="email" name="email" required placeholder="enter your email">
-        <input type="password" name="password" required placeholder="enter your password">
-        <input type="password" name="confirm_pass" required placeholder="confirm your password">
-        <select name="user_type">
-        <option value="user">user</option>
-    <!-- <option value="admin">admin</option> -->
-        </select>
-        <input type="submit" name="submit" value="register now" class="form-btn">
-        <p>already have an account? <a href="login_form.php">login now</a></p>
-    </form>
 
-</div>
+                    <form action="#" class="mt-5" method="POST">
+
+                        <h1 class="fw-light fs-4 mb-3">Register Now</h1>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="name">Name</label>
+                            <input class="form-control" type="text" name="name" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="email">Email</label>
+                            <input class="form-control" type="email" name="email" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="password">Password</label>
+                            <input class="form-control" type="password" name="password" id="password" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="confirm_pass">Confirm Password</label>
+                            <input class="form-control" type="confirm_pass" name="confirm_pass" id="confirm_pass" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="role">Role</label>
+                            <select class="form-select" aria-label="Default select role" id="role">
+                                <option value="">Select Role</option>
+                                <option value="user">User</option>
+                                <option value="admin">Admin</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <input class="btn btn-lb w-100" type="submit" name="submit" value="Register now" class="form-btn">
+                        </div>
+                        <p>Already have an account? <a href="login_form.php" class="link-light">Login now</a></p>
+                    </form>
+
+                    <!-- Company Logos -->
+                    <div class="mx-5 mt-5 d-flex gap-3 justify-content-center align-items-center">
+                        <img class="w-25" src="image/cpe.png" alt="CPE Logo">
+                        <img class="w-25" src="image/snc.png" alt="SNC Logo">
+                    </div>
+                </div>
+                <div class="col-8 d-none d-lg-flex justify-content-center align-items-center">
+                    <img class="w-75" src="image/Hydroponics.png" alt="Hydroponics Vector Art">
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
